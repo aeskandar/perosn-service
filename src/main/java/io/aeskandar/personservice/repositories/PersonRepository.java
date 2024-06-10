@@ -10,8 +10,6 @@ import java.util.Optional;
 @Repository
 public interface PersonRepository extends JpaRepository<PersonDao, Long> {
 
-    PersonDao getPersonByFirstName(String firstName);
-
     List<PersonDao> findAllByLastName(String lastName);
 
     Optional<PersonDao> findByFirstNameAndLastName(String firstName, String lastName);
